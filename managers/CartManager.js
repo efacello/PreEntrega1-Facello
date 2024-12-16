@@ -21,9 +21,13 @@ class CartManager {
 
     async createCart() {
         const carts = await this.readFile();
-        const newCart = { id: this.nextId++, products: [] };
-
+    
+        // checkear el id maximo existente, sino agregar nuevo con id 1
+        const newId = carts.length > 0 ? Math.max(...carts.map(c => c.id)) + 1 : 1;
+    
+        const newCart = { id: newId, products: [] };
         carts.push(newCart);
+    
         await this.writeFile(carts);
         return newCart;
     }
