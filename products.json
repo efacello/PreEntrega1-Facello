@@ -1,0 +1,44 @@
+[
+  {
+    "id": 2,
+    "title": "Producto 1",
+    "description": "Descripción detallada del Producto 1",
+    "code": "TEST001",
+    "price": 100,
+    "status": true,
+    "stock": 50,
+    "category": "Electrónica",
+    "thumbnails": [
+      "img1.jpg",
+      "img2.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Producto 2",
+    "description": "Descripción detallada del Producto 2",
+    "code": "TEST002",
+    "price": 200,
+    "status": true,
+    "stock": 30,
+    "category": "Electrónica",
+    "thumbnails": [
+      "img3.jpg",
+      "img4.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Producto 3",
+    "description": "Descripción detallada del Producto 3",
+    "code": "TEST003",
+    "price": 150,
+    "status": true,
+    "stock": 70,
+    "category": "Hogar",
+    "thumbnails": [
+      "img5.jpg",
+      "img6.jpg"
+    ]
+  }
+]
