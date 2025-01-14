@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
 router.get('/:cid', async (req, res) => {
     try {
         const cart = await cartManager.getCartById(parseInt(req.params.cid));
-        res.json(cart.products); // Devuelve los productos del carrito
+        res.json(cart.products); 
     } catch (error) {
         res.status(404).json({ error: error.message });
     }
@@ -23,7 +23,7 @@ router.get('/:cid', async (req, res) => {
 router.post('/:cid/product/:pid', async (req, res) => {
     try {
         const updatedCart = await cartManager.addProductToCart(parseInt(req.params.cid), parseInt(req.params.pid));
-        res.json(updatedCart); // Devuelve el carrito actualizado
+        res.json(updatedCart); 
     } catch (error) {
         res.status(404).json({ error: error.message });
     }

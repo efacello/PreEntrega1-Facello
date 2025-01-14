@@ -3,7 +3,6 @@ const fs = require('fs');
 class ProductManager {
     constructor(path) {
         this.path = path;
-        this.nextId = 1;
     }
 
     async readFile() {
@@ -31,8 +30,11 @@ class ProductManager {
             throw new Error(`El código ${code} ya está registrado.`);
         }
 
+        // Calcular el próximo ID dinámicamente
+        const nextId = products.length > 0 ? Math.max(...products.map(p => p.id)) + 1 : 1;
+
         const newProduct = {
-            id: this.nextId++,
+            id: nextId,
             title, description, code, price, status, stock, category, thumbnails
         };
 
@@ -73,6 +75,10 @@ class ProductManager {
     }
 
     async deleteProduct(id) {
+        if (typeof id !== 'number') {
+            throw new Error("El ID debe ser un número.");
+        }
+
         let products = await this.readFile();
         const productIndex = products.findIndex(p => p.id === id);
 
@@ -87,3 +93,4 @@ class ProductManager {
 }
 
 module.exports = ProductManager;
+

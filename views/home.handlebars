@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Título de la página -->
+        <h2 class="text-center">{{title}}</h2>
+
+        <!-- Lista de productos -->
+        <table class="table table-striped mt-4">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="product-list">
+                {{#each products}} 
+                    <tr>
+                        <td>{{this.id}}</td>
+                        <td>{{this.title}}</td>
+                        <td>{{this.description}}</td>
+                        <td>${{this.price}}</td>
+                        <td>{{this.stock}}</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm eliminar" data-id="{{this.id}}">Eliminar</button>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        // Manejar la eliminación de productos
+        const eliminarBotones = document.querySelectorAll('.eliminar');
+        eliminarBotones.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const id = e.target.dataset.id; // Obtener el ID del prod
+                socket.emit('eliminarProducto', id); // evento al server
+            });
+        });
+
+        // Escuchar productos actualizados y actualizar la tabla
+        socket.on('productosActualizados', (productos) => {
+            const productList = document.getElementById('product-list');
+            productList.innerHTML = ''; 
+
+            // Iterar sobre los productos y agregar las filas a la tabla
+            productos.forEach(product => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${product.id}</td>
+                    <td>${product.title}</td>
+                    <td>${product.description}</td>
+                    <td>${product.price}</td>
+                    <td>${product.stock}</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm eliminar" data-id="${product.id}">Eliminar</button>
+                    </td>
+                `;
+                productList.appendChild(row);
+
+                // Reagregar el evento al nuevo botón
+                const eliminarBoton = row.querySelector('.eliminar');
+                eliminarBoton.addEventListener('click', (e) => {
+                    const id = e.target.dataset.id;
+                    socket.emit('eliminarProducto', id);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

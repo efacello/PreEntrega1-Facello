@@ -1,44 +1,212 @@
 [
   {
-    "id": 2,
-    "title": "Producto 1",
-    "description": "Descripción detallada del Producto 1",
+    "id": 1,
+    "title": "Vela de soja Bombé Baja",
+    "description": "Fragancia French Vanilla",
     "code": "TEST001",
-    "price": 100,
+    "price": 23500,
     "status": true,
     "stock": 50,
-    "category": "Electrónica",
+    "category": "Sin tapa",
     "thumbnails": [
       "img1.jpg",
       "img2.jpg"
     ]
   },
   {
-    "id": 3,
-    "title": "Producto 2",
-    "description": "Descripción detallada del Producto 2",
+    "id": 2,
+    "title": "Vela de Soja Petit Exclusiu",
+    "description": "Fragancia Orange Blossom & Linden",
     "code": "TEST002",
-    "price": 200,
+    "price": 75300,
     "status": true,
     "stock": 30,
-    "category": "Electrónica",
+    "category": "Sin tapa",
     "thumbnails": [
       "img3.jpg",
       "img4.jpg"
     ]
   },
   {
-    "id": 4,
-    "title": "Producto 3",
-    "description": "Descripción detallada del Producto 3",
+    "id": 3,
+    "title": "Vela de Soja Nou Blau Ciel",
+    "description": "Fragancia Verbeine",
     "code": "TEST003",
-    "price": 150,
+    "price": 27800,
     "status": true,
     "stock": 70,
-    "category": "Hogar",
+    "category": "Sin tapa",
     "thumbnails": [
       "img5.jpg",
       "img6.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Vela de soja Retro",
+    "description": "Fragancia Jazmines",
+    "code": "TEST004",
+    "price": 61500,
+    "status": true,
+    "stock": 40,
+    "category": "Deluxe",
+    "thumbnails": [
+      "img7.jpg",
+      "img8.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Vela de soja Cercles Nude",
+    "description": "Fragancia Lotus",
+    "code": "TEST005",
+    "price": 36700,
+    "status": true,
+    "stock": 15,
+    "category": "Deluxe",
+    "thumbnails": [
+      "img9.jpg",
+      "img10.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Vela de Soja Bombé Anxa Blau",
+    "description": "Fragancia Acacias",
+    "code": "TEST006",
+    "price": 85200,
+    "status": true,
+    "stock": 12,
+    "category": "Deluxe",
+    "thumbnails": [
+      "img11.jpg",
+      "img12.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Vela de soja Bohemia Sayri",
+    "description": "Fragancia Nardos",
+    "code": "TEST007",
+    "price": 30200,
+    "status": true,
+    "stock": 5,
+    "category": "Con tapa",
+    "thumbnails": [
+      "img13.jpg",
+      "img14.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Vela de soja Taytey",
+    "description": "Fragancia Lemon",
+    "code": "TEST008",
+    "price": 22500,
+    "status": true,
+    "stock": 25,
+    "category": "Con tapa",
+    "thumbnails": [
+      "img15.jpg",
+      "img16.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Vela de soja Potiche",
+    "description": "Fragancia Magnolias",
+    "code": "TEST009",
+    "price": 54600,
+    "status": true,
+    "stock": 40,
+    "category": "Con tapa",
+    "thumbnails": [
+      "img17.jpg",
+      "img18.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Velon de soja Anxa",
+    "description": "Fragancia Black Roses & Cedar",
+    "code": "TEST010",
+    "price": 97300,
+    "status": true,
+    "stock": 60,
+    "category": "Velon",
+    "thumbnails": [
+      "img19.jpg",
+      "img20.jpg"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Velon de soja Cub",
+    "description": "Fragancia Bohémia Lirios",
+    "code": "TEST011",
+    "price": 98700,
+    "status": true,
+    "stock": 22,
+    "category": "Velon",
+    "thumbnails": [
+      "img21.jpg",
+      "img22.jpg"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Velon de soja Gegant",
+    "description": "Fragancia Fulles Verdes",
+    "code": "TEST012",
+    "price": 99600,
+    "status": true,
+    "stock": 18,
+    "category": "Velon",
+    "thumbnails": [
+      "img23.jpg",
+      "img24.jpg"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Vela de soja Bombe Anxa",
+    "description": "Fragancia Cardamon",
+    "code": "TEST013",
+    "price": 95700,
+    "status": true,
+    "stock": 10,
+    "category": "Art",
+    "thumbnails": [
+      "img25.jpg",
+      "img26.jpg"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Vela de soja Gran Bombe",
+    "description": "Fragancia Vellut De Nards",
+    "code": "TEST014",
+    "price": 76300,
+    "status": true,
+    "stock": 30,
+    "category": "Art",
+    "thumbnails": [
+      "img27.jpg",
+      "img28.jpg"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Vela de soja Petite XL",
+    "description": "Fragancia Figues Dolces",
+    "code": "TEST015",
+    "price": 78700,
+    "status": true,
+    "stock": 12,
+    "category": "Art",
+    "thumbnails": [
+      "img29.jpg",
+      "img30.jpg"
     ]
   }
 ]
